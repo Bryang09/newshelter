@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Pets.scss";
+
 const Pets = () => {
   return (
     <div className="landingPetsLink">

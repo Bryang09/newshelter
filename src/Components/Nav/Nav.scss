@@ -1,0 +1,34 @@
+.Nav {
+  width: 100vw;
+  background: red;
+  display: flex;
+
+  .navTitle {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      margin: 1vh 0;
+    }
+  }
+
+  .Navigation {
+    display: flex;
+    width: 50%;
+
+    a {
+      color: #fff;
+    }
+    .active {
+      color: aquamarine;
+    }
+
+    h4 {
+      flex-grow: 1;
+      color: #fff;
+      max-width: 20%;
+    }
+  }
+}

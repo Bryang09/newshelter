@@ -2,12 +2,13 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-const Form = props => {
-  return (
-    <div className="landingForm">
-      <form onChange={props.change}>
-        <input type="text" placeholder="Type Zip To Find Shelters Near You" />
+import "./Search.scss";
 
+const Search = props => {
+  return (
+    <div className="navSearch">
+      <form onChange={props.change}>
+        <input type="text" />
         <Link to={`/shelters/${props.zip}`}>
           <button
             type="submit"
@@ -24,4 +25,4 @@ const Form = props => {
   );
 };
 
-export default Form;
+export default Search;

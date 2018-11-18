@@ -1,11 +1,16 @@
 .Landing {
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(https://images.unsplash.com/photo-1496982411516-bfb7eb1c74e1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=609100086da8124d588ef6f3eac4c43b&auto=format&fit=crop&w=1350&q=80)
-      no-repeat center center / cover;
+  min-height: 100vh;
+  background: linear-gradient(
+      90deg,
+      rgba(63, 50, 43, 0.7),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(https://images.unsplash.com/photo-1511211883643-af111278ec5c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=311bf3932a1417e07bcb52b6190d9e33&auto=format&fit=crop&w=1350&q=80)
+      no-repeat center 1% / cover;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 
   h1 {
@@ -13,18 +18,29 @@
     font-weight: 400;
     font-size: 4em;
     margin-bottom: 1vh;
+    text-align: center;
+  }
+
+  @keyframes landing {
+    0% {
+      transform: translateX(-100vw);
+    }
+    50% {
+      transform: translateX(0);
+    }
   }
 
   h3 {
     width: 70%;
     color: #fff;
     font-weight: 300;
-    text-align: center;
+    // text-align: center;
     font-size: 2em;
   }
 
   .landingForm {
     display: flex;
+    margin-bottom: 3vh;
 
     input[type="text"] {
       width: 300px;
@@ -41,5 +57,15 @@
     color: #fff;
     margin-top: 3vh;
     font-weight: 300;
+  }
+
+  .landingText {
+    width: 50%;
+    margin-left: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: landing 1s linear;
   }
 }

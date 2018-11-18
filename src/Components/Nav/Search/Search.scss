@@ -1,0 +1,20 @@
+.navSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3vw;
+
+  a {
+    color: #fff;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a {
+    margin-left: 1vw;
+  }
+}
