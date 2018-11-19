@@ -1,0 +1,31 @@
+.Shelters_ {
+  margin-left: 5vw;
+  min-height: 100%;
+  max-height: 25vh;
+  // border: 1px solid red;
+  border-radius: 5px;
+  margin: 2vh auto;
+  width: 80vw;
+  padding-left: 5vw;
+  background: #fff;
+  box-shadow: 1px 8px 70px #f7f7f7;
+
+  a {
+    color: #0197ef;
+  }
+
+  h3 {
+    font-weight: 300;
+    color: #0197ef;
+    padding-top: 2vw;
+    font-size: 1.3em;
+  }
+
+  h4 {
+    font-weight: 400;
+
+    &#phone {
+      padding-bottom: 2vh;
+    }
+  }
+}

@@ -16,17 +16,26 @@ class Nav extends Component {
     this.setState({ zip: e.target.value });
   };
   render() {
-    console.log(this.state.zip);
     return (
       <div className="Nav">
-        <div className="navTitle">
+        <div
+          className="navTitle"
+          style={
+            this.props.page === "/" ? { backgroundColor: "#272727" } : null
+          }
+        >
           <h2>
             <NavLink to="/" exact activeClassName="active">
               Bryan's Shelters
             </NavLink>
           </h2>
         </div>
-        <div className="Navigation">
+        <div
+          className="Navigation"
+          style={
+            this.props.page === "/" ? { backgroundColor: "#df97ae" } : null
+          }
+        >
           <h4>
             <NavLink to="/dogs" activeClassName="active">
               Dogs

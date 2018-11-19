@@ -1,7 +1,9 @@
 .Nav {
   width: 100vw;
-  background: red;
+  background: #272727;
   display: flex;
+  position: fixed;
+  top: 0;
 
   .navTitle {
     width: 50%;
@@ -17,6 +19,8 @@
   .Navigation {
     display: flex;
     width: 50%;
+    justify-content: center;
+    align-items: center;
 
     a {
       color: #fff;

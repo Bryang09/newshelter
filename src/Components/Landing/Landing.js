@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import Form from "./Form/Form";
 import Pets from "./Pets/Pets";
+import Nav from "../Nav/Nav";
 
 import "./Landing.scss";
 
@@ -15,9 +16,9 @@ class Landing extends Component {
     this.setState({ input: e.target.value });
   };
   render() {
-    console.log(this.state.input);
     return (
       <div className="Landing">
+        <Nav page={this.props.match.path} />
         <div className="landingText">
           <h1>Bryan's Shelters</h1>
           <h3>
@@ -27,6 +28,9 @@ class Landing extends Component {
           </h3>
           <Form change={this.onZip} zip={this.state.input} />
           <Pets />
+        </div>
+        <div className="landingImg">
+          <div className="LandingImg" />
         </div>
       </div>
     );
