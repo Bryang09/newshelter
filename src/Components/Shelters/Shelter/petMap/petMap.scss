@@ -1,0 +1,77 @@
+.ShelterPets {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    min-width: 30%;
+    min-height: 30vh;
+    margin: 1vh 1.5%;
+  }
+
+  .shelterPet {
+    display: flex;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center 25%;
+    background-repeat: no-repeat;
+    animation: images 0.5s linear;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    &:nth-child(even) {
+      animation: imagesEven 0.5s linear;
+    }
+
+    &:hover {
+    }
+
+    .shelterPetText {
+      min-width: 100%;
+      min-height: 30vh;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      &:hover {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      }
+    }
+
+    h5 {
+      width: 40%;
+      text-align: center;
+      height: 4vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0;
+      // margin-right: -1vw;
+      background: #45c945;
+      color: #fff;
+      border-radius: 5px;
+    }
+  }
+
+  @keyframes images {
+    0% {
+      transform: translateY(100vh);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes imagesEven {
+    0% {
+      transform: translateY(-100vh);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}

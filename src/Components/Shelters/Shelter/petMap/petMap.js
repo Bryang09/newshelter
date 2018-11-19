@@ -1,19 +1,33 @@
 import React from "react";
 
-const PetMap = props => {
-  console.log(props.pets);
+import { Link } from "react-router-dom";
 
+import "./petMap.scss";
+
+const PetMap = props => {
   const Pets = props.pets
     .filter(res => res.media.photos)
     .map(res => {
       return (
-        <div className="shelterPet" key={res.id.$t}>
-          <h3>{res.name.$t}</h3>
-        </div>
+        <Link
+          to={{
+            pathname: `/pets/${res.id.$t}`
+          }}
+          key={res.id.$t}
+        >
+          <div
+            className="shelterPet"
+            style={{ backgroundImage: `url(${res.media.photos.photo[2].$t})` }}
+          >
+            <div className="shelterPetText">
+              <h5>{res.name.$t}</h5>
+            </div>
+          </div>
+        </Link>
       );
     });
 
-  return Pets;
+  return <div className="ShelterPets">{Pets}</div>;
 };
 
 export default PetMap;

@@ -18,7 +18,7 @@ class Shelter extends Component {
 
     axios
       .get(
-        `https://cors-anywhere.herokuapp.com/http://api.petfinder.com/shelter.getPets?format=json&key=${API_KEY}&id=${id}&count=50`
+        `https://cors-anywhere.herokuapp.com/http://api.petfinder.com/shelter.getPets?format=json&key=${API_KEY}&id=${id}&count=75`
       )
       .then(res => this.setState({ results: res.data.petfinder.pets.pet }))
       .catch(err => console.log(err));
@@ -31,9 +31,12 @@ class Shelter extends Component {
     return (
       <div className="Shelter">
         <Nav />
-        {this.state.results !== false ? (
+        <h1>Feel Free to Search for your New Best Friend</h1>
+        {this.state.results !== false && this.state.results !== undefined ? (
           <PetMap pets={this.state.results} />
-        ) : null}
+        ) : (
+          <h1>Information not found</h1>
+        )}
       </div>
     );
   }

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import "./shelterMap.scss";
 
 const shelterMap = props => {
+  console.log(props);
   const shelters = props.shelters.map(res => {
     return (
       <div className="Shelters_" key={res.id.$t}>
