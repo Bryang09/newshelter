@@ -1,0 +1,63 @@
+.Dog {
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-weight: 300;
+    margin-left: 5vw;
+
+    span {
+      color: #0197ef;
+    }
+  }
+
+  .dogMap {
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    a {
+      min-width: 30%;
+      min-height: 30vh;
+      margin: 1vh 1.5%;
+    }
+
+    .dog {
+      display: flex;
+      min-width: 100%;
+      min-height: 100%;
+      background-size: cover;
+      background-position: center 25%;
+      background-repeat: no-repeat;
+      // animation: images 0.5s linear;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      .dogText {
+        min-width: 100%;
+        min-height: 30vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        h5 {
+          width: 40%;
+          text-align: center;
+          height: 4vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 0;
+          background: #45c945;
+          color: #fff;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}

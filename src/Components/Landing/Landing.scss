@@ -17,7 +17,9 @@
   h1 {
     color: #fff;
     font-weight: 400;
-    font-size: 4em;
+    font-size: 3.2em;
+    width: 70%;
+    margin: 0 0 1vh;
     margin-bottom: 1vh;
     text-align: center;
   }
@@ -36,22 +38,7 @@
     color: #fff;
     font-weight: 300;
     // text-align: center;
-    font-size: 2em;
-  }
-
-  .landingForm {
-    display: flex;
-    margin-bottom: 3vh;
-
-    input[type="text"] {
-      width: 300px;
-      text-align: center;
-      padding: 0.5vh 1.2vw;
-    }
-
-    a {
-      margin-left: 2vw;
-    }
+    font-size: 1.5em;
   }
 
   h4 {
@@ -84,5 +71,73 @@
       no-repeat center -20% / cover;
     width: 100%;
     height: 100vh;
+  }
+}
+
+.text-input {
+  position: relative;
+  margin-top: 50px;
+  width: 40%;
+
+  input[type="text"] {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 10px 10px 10px 100px;
+    transition: all 0.1s ease-out;
+  }
+
+  input[type="text"] + label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    border-radius: 3px 0 0 3px;
+    padding: 0 20px;
+    background: #3ea62f;
+    transform: translateZ(0) translateX(0);
+    transition: all 0.3s ease-in;
+    transition-delay: 0.2s;
+  }
+
+  input[type="text"]:focus + label {
+    transform: translateY(-120%) translateX(0%);
+    border-radius: 3px;
+    transition: all 0.1s ease-out;
+  }
+
+  input[type="text"]:focus {
+    padding: 10px;
+    transition: all 0.3s ease-out;
+    transition-delay: 0.2s;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .Landing {
+    h1 {
+      font-size: 3em;
+    }
+    h3 {
+      font-size: 1.5em;
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 771px) {
+  .Landing {
+    flex-direction: column;
+
+    .landingText {
+      width: 100%;
+    }
   }
 }

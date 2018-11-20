@@ -13,6 +13,7 @@
 
     h2 {
       margin: 1vh 0;
+      font-weight: 400;
     }
   }
 
@@ -33,6 +34,8 @@
       flex-grow: 1;
       color: #fff;
       max-width: 20%;
+      text-transform: uppercase;
+      font-weight: 300;
     }
   }
 }

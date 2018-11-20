@@ -17,11 +17,20 @@ class Nav extends Component {
   };
   render() {
     return (
-      <div className="Nav">
+      <div
+        className="Nav"
+        style={
+          this.props.page === "/"
+            ? { backgroundColor: "rgba(0,0,0,0.0)" }
+            : null
+        }
+      >
         <div
           className="navTitle"
           style={
-            this.props.page === "/" ? { backgroundColor: "#272727" } : null
+            this.props.page === "/"
+              ? { backgroundColor: "rgba(0,0,0,0.0)" }
+              : null
           }
         >
           <h2>
@@ -33,7 +42,9 @@ class Nav extends Component {
         <div
           className="Navigation"
           style={
-            this.props.page === "/" ? { backgroundColor: "#df97ae" } : null
+            this.props.page === "/"
+              ? { backgroundColor: "rgba(0,0,0,0.0)" }
+              : null
           }
         >
           <h4>

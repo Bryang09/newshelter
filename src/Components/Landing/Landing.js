@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import Form from "./Form/Form";
-import Pets from "./Pets/Pets";
 import Nav from "../Nav/Nav";
 
 import "./Landing.scss";
@@ -27,7 +26,6 @@ class Landing extends Component {
             will find animal shelters near you!
           </h3>
           <Form change={this.onZip} zip={this.state.input} />
-          <Pets />
         </div>
         <div className="landingImg">
           <div className="LandingImg" />

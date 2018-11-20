@@ -45,3 +45,23 @@
   color: #0d57a2;
   margin-bottom: 0;
 }
+
+@media screen and (max-width: 768px) {
+  .ShelterInfo {
+    width: 100%;
+
+    .Text {
+      margin-top: 1vh;
+
+      h1 {
+        font-size: 1.15em;
+      }
+      h2 {
+        font-size: 1em;
+      }
+      h3 {
+        font-size: 0.9em;
+      }
+    }
+  }
+}

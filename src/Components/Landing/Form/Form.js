@@ -3,24 +3,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Form = props => {
+  console.log(props);
   return (
-    <div className="landingForm">
-      <form onChange={props.change}>
-        <input type="text" placeholder="Type Zip To Find Shelters Near You" />
-
-        <Link to={`/shelters/${props.zip}`}>
-          <button
-            type="submit"
-            style={{ height: 0, width: 0, padding: 0, border: 0 }}
-          />
-          <img
-            src="https://img.icons8.com/windows/50/ffffff/search.png"
-            style={{ height: "25px", color: "#fff" }}
-            alt="search"
-          />
-        </Link>
-      </form>
-    </div>
+    <form className="text-input" onChange={props.change}>
+      <input type="text" id="input1" placeholder="Search Shelters Near You" />
+      <label htmlFor="input1">Zip</label>
+      <Link to={`/shelters/${props.zip}`}>
+        <button
+          type="submit"
+          style={{ height: 0, width: 0, padding: 0, border: 0 }}
+        />
+      </Link>
+    </form>
   );
 };
 

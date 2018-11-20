@@ -25,9 +25,6 @@ class Shelter extends Component {
   };
 
   render() {
-    console.log(this.state.results);
-    console.log(this.props);
-    console.log(this.props.match.params.id);
     return (
       <div className="Shelter">
         <Nav />

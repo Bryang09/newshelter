@@ -8,7 +8,7 @@ const Search = props => {
   return (
     <div className="navSearch">
       <form onChange={props.change}>
-        <input type="text" />
+        <input type="text" placeholder="Search Shelters Near You" />
         <Link to={`/shelters/${props.zip}`}>
           <button
             type="submit"

@@ -1,14 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
 
 import Nav from "../Nav/Nav";
+import Hero from "./Hero/Hero";
 
-const Dogs = () => {
-  return (
-    <div className="Dogs">
-      <Nav />
-      <h1>Cats</h1>
-    </div>
-  );
-};
+class Cats extends Component {
+  state = {
+    zip: false
+  };
 
-export default Dogs;
+  onZip = e => {
+    e.preventDefault();
+    this.setState({ zip: e.target.value });
+  };
+  render() {
+    return (
+      <div className="Cats">
+        <Nav />
+        <Hero change={this.onZip} zip={this.state.zip} />
+      </div>
+    );
+  }
+}
+
+export default Cats;
