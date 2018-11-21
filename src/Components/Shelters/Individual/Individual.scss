@@ -7,9 +7,9 @@
   flex-direction: column;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 772px) {
   .Individual {
     min-height: 100vh;
-    max-height: 100vh;
+    padding-bottom: 5vh;
   }
 }

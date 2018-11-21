@@ -25,8 +25,6 @@ class Individual extends Component {
   };
 
   render() {
-    console.log(this.state.pet);
-
     return (
       <div
         className="Individual"

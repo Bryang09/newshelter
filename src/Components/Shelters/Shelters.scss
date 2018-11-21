@@ -15,3 +15,15 @@
     }
   }
 }
+
+@media screen and (max-width: 772px) {
+  h1 {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.3em;
+  }
+}

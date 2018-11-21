@@ -5,23 +5,30 @@ import "./Nav.scss";
 import { NavLink } from "react-router-dom";
 
 import Search from "./Search/Search";
+import Burger from "./Burger/Burger";
 
 class Nav extends Component {
   state = {
-    zip: ""
+    zip: "",
+    burger: false
   };
 
   onZip = e => {
     e.preventDefault();
     this.setState({ zip: e.target.value });
   };
+  onMobile = () => {
+    this.setState({ burger: !this.state.burger });
+  };
   render() {
     return (
       <div
         className="Nav"
         style={
-          this.props.page === "/"
-            ? { backgroundColor: "rgba(0,0,0,0.0)" }
+          this.state.burger
+            ? { backgroundColor: "#ff7ba5", height: "100vh" }
+            : this.props.page === "/"
+            ? { backgroundColor: "rgba(0,0,0,0)" }
             : null
         }
       >
@@ -33,7 +40,18 @@ class Nav extends Component {
               : null
           }
         >
-          <h2>
+          <Burger
+            click={this.onMobile}
+            burger={this.state.burger}
+            color={this.props.color}
+          />
+          <h2
+            style={
+              this.state.burger
+                ? { display: "flex", textTransform: "uppercase" }
+                : null
+            }
+          >
             <NavLink to="/" exact activeClassName="active">
               Bryan's Shelters
             </NavLink>
@@ -41,11 +59,7 @@ class Nav extends Component {
         </div>
         <div
           className="Navigation"
-          style={
-            this.props.page === "/"
-              ? { backgroundColor: "rgba(0,0,0,0.0)" }
-              : null
-          }
+          style={this.state.burger ? { display: "flex" } : null}
         >
           <h4>
             <NavLink to="/dogs" activeClassName="active">
@@ -57,7 +71,12 @@ class Nav extends Component {
               Cats
             </NavLink>
           </h4>
-          <Search change={this.onZip} zip={this.state.zip} />
+          <Search
+            change={this.onZip}
+            zip={this.state.zip}
+            burger={this.state.burger}
+            click={this.onMobile}
+          />
         </div>
       </div>
     );

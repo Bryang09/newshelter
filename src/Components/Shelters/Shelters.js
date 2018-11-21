@@ -21,7 +21,9 @@ class Shelters extends Component {
         `https://cors-anywhere.herokuapp.com/http://api.petfinder.com/shelter.find?format=json&key=${API_KEY}&location=${zip}`
       )
       .then(res => this.setState({ zip: res.data.petfinder.shelters.shelter }))
-      .catch(err => console.log(err));
+      .catch(err =>
+        this.setState({ zip: "There Was An Error Retrieving the Information" })
+      );
   };
 
   render() {
@@ -29,11 +31,13 @@ class Shelters extends Component {
 
     return (
       <div className="Shelters">
-        <Nav />
+        <Nav color="#000" />
         <h1>
           Searching for Shelters near <span>{zip}</span>
         </h1>
-        {this.state.zip !== false ? (
+        {this.state.zip === "There Was An Error Retrieving the Information" ? (
+          <h1>{this.state.zip}</h1>
+        ) : this.state.zip !== undefined && this.state.zip !== false ? (
           <ShelterMap shelters={this.state.zip} />
         ) : null}
       </div>

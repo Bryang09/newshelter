@@ -19,7 +19,9 @@ class Cat extends Component {
         `https://cors-anywhere.herokuapp.com/http://api.petfinder.com/pet.find?format=json&key=${API_KEY}&animal=cat&location=${zip}&count=100`
       )
       .then(res => this.setState({ list: res.data.petfinder.pets.pet }))
-      .catch(err => console.log(err));
+      .catch(err =>
+        this.setState({ list: "There Was An Error Retrieving the Information" })
+      );
   };
 
   render() {
@@ -27,15 +29,16 @@ class Cat extends Component {
 
     return (
       <div className="Dog">
-        <Nav />
+        <Nav color="#000" />
         <h1>
           Searching For Cats Near <span>{zip}</span>
         </h1>
-        {this.state.list !== false ? (
+
+        {this.state.list === "There Was An Error Retrieving the Information" ? (
+          <h1>{this.state.list}</h1>
+        ) : this.state.list !== undefined && this.state.list !== false ? (
           <CatMap cats={this.state.list} />
-        ) : (
-          <h1>Please Wait While We Fetch The Results</h1>
-        )}
+        ) : null}
       </div>
     );
   }

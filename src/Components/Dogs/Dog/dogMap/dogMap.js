@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const dogMap = props => {
-  console.log(props.dogs);
   const dog = props.dogs;
 
   const dogs = dog

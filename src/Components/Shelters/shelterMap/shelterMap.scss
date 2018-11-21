@@ -29,3 +29,15 @@
     }
   }
 }
+
+@media screen and (max-width: 772px) {
+  .Shelters_ {
+    max-height: 50vh;
+    h3 {
+      font-size: 1.1em;
+    }
+    h4 {
+      font-size: 0.9em;
+    }
+  }
+}

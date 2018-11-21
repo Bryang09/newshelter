@@ -132,12 +132,37 @@
   }
 }
 
-@media screen and (max-width: 771px) {
+@media screen and (max-width: 772px) {
   .Landing {
     flex-direction: column;
+    background-position: 86% center;
+
+    h3 {
+      text-align: center;
+    }
 
     .landingText {
       width: 100%;
+      background: rgba(0, 0, 0, 0);
     }
+
+    .LandingImg {
+      display: none;
+    }
+    .landingImg {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Landing {
+    h3 {
+      font-size: 1.2em;
+    }
+  }
+
+  .text-input {
+    width: 60%;
   }
 }

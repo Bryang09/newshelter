@@ -22,8 +22,6 @@ class IndividualDogs extends Component {
       .catch(err => console.log(err));
   };
   render() {
-    console.log(this.state.pet);
-    console.log(this.props);
     return (
       <div
         className="Individual"

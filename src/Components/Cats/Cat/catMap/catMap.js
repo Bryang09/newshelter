@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const catMap = props => {
-  console.log(props.cats);
   const cat = props.cats;
 
   const cats = cat

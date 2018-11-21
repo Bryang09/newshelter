@@ -3,7 +3,6 @@ import React from "react";
 import "./ShelterInfo.scss";
 
 const ShelterInfo = props => {
-  console.log(props.pet);
   const pet = props.pet;
   return (
     <div className="ShelterInfo">

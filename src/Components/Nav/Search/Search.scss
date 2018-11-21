@@ -17,4 +17,30 @@
   a {
     margin-left: 1vw;
   }
+
+  input {
+    border: 1px solid #efef;
+    outline: none;
+    border-radius: 3px;
+    padding: 6px 10px;
+  }
+}
+
+@media screen and (max-width: 772px) {
+  .navSearch {
+    width: 100%;
+
+    form {
+      width: 100%;
+
+      a img {
+        display: none;
+      }
+    }
+    input {
+      width: 80%;
+      text-align: center;
+      margin: 5vh 0 0;
+    }
+  }
 }

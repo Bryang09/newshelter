@@ -1,7 +1,6 @@
 import React from "react";
 
 const ShelterInfo = props => {
-  console.log(props.pet);
   const pet = props.pet;
   return (
     <div className="ShelterInfo">

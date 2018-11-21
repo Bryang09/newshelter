@@ -6,7 +6,6 @@ import ShelterInfo from "./ShelterInfo/ShelterInfo";
 import "./Single.scss";
 
 const Single = props => {
-  console.log(props.pet);
   const pet = props.pet;
 
   return (

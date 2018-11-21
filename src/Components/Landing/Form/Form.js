@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Form = props => {
-  console.log(props);
   return (
     <form className="text-input" onChange={props.change}>
       <input type="text" id="input1" placeholder="Search Shelters Near You" />

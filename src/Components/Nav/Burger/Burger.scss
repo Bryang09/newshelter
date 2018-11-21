@@ -1,0 +1,29 @@
+.BurgerNav {
+  display: none;
+  cursor: pointer;
+  // background: linear-gradient(#ff7ba5, #ff7ba5);
+  border-radius: 5px;
+}
+.btn {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: #fff;
+  opacity: 0.8;
+  transition: 0.5s ease-out;
+}
+
+@media screen and (max-width: 772px) {
+  .BurgerNav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 5vw;
+    // margin: 2vh 0;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 0.5vh 0.5vw;
+  }
+}

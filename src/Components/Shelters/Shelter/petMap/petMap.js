@@ -20,7 +20,9 @@ const PetMap = props => {
             style={{ backgroundImage: `url(${res.media.photos.photo[2].$t})` }}
           >
             <div className="shelterPetText">
-              <h5>{res.name.$t}</h5>
+              <h5>
+                {res.name.$t}/ {res.sex.$t}{" "}
+              </h5>
             </div>
           </div>
         </Link>

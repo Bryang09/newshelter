@@ -21,19 +21,25 @@ class Shelter extends Component {
         `https://cors-anywhere.herokuapp.com/http://api.petfinder.com/shelter.getPets?format=json&key=${API_KEY}&id=${id}&count=75`
       )
       .then(res => this.setState({ results: res.data.petfinder.pets.pet }))
-      .catch(err => console.log(err));
+      .catch(err =>
+        this.setState({
+          results: "There Was An Error Retrieving the Information"
+        })
+      );
   };
 
   render() {
     return (
       <div className="Shelter">
-        <Nav />
+        <Nav color="#000" />
         <h1>Feel Free to Search for your New Best Friend</h1>
-        {this.state.results !== false && this.state.results !== undefined ? (
+
+        {this.state.results ===
+        "There Was An Error Retrieving the Information" ? (
+          <h1>{this.state.results}</h1>
+        ) : this.state.results !== undefined && this.state.results !== false ? (
           <PetMap pets={this.state.results} />
-        ) : (
-          <h1>Information not found</h1>
-        )}
+        ) : null}
       </div>
     );
   }
